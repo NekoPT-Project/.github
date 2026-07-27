@@ -13,7 +13,7 @@
 | 工具 | 定位 | 技术栈 |
 |------|------|--------|
 | **[NekoC2](../NekoC2/)** | 自研协议模块化 C2 框架 | Java · C · Electron · AES-128-CBC |
-| **[NekoGate](../NekoGate/)** | 自研协议内网穿透与代理 | Rust · React · Ant Design |
+| **[NekoGate](../NekoGate/)** | 自研协议内网穿透 + 四种流量伪装 | Rust · React · Ant Design |
 
 ---
 
