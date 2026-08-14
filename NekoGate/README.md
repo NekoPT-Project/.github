@@ -14,7 +14,7 @@
 │  (Operator)  │     管理 API      │   Server     │
 └──────────────┘                   └──────┬───────┘
                                           │ 自研隧道协议
-                                          │ (TCP / TLS / WS / SSH)
+                                          │ (TCP / TLS / WS / SSH / REALITY)
                                           ▼
                                    ┌──────────────┐
                                    │  NekoGate    │
@@ -34,7 +34,7 @@
 ## 功能
 
 - **自研隧道协议**：client ↔ server 通信协议完全自研，不复用常见穿透 / 代理工具的协议特征；对外代理侧采用标准 SOCKS5
-- **四种流量伪装**：裸 TCP / TLS（伪装 HTTPS）/ WebSocket（伪装实时应用）/ 真 SSH 协议外壳——按场景选，抗被动流量分析与主动探测
+- **五种流量伪装**：裸 TCP / TLS（伪装 HTTPS）/ WebSocket（伪装实时应用）/ 真 SSH 协议外壳 / REALITY（伪装成访问真实网站的 TLS1.3，主动探测落到真实站点）——按场景选，抗被动流量分析与主动探测
 - **TLS 钉扎**：client 可钉扎 server 证书指纹，抵抗企业 SSL 解密网关 MITM
 - **TCP 端口转发**：外部访问 server 端口 → 经隧道到达 client 侧内网服务
 - **SOCKS5 出口**：client 侧标准 SOCKS5，按需动态访问目标
@@ -53,6 +53,7 @@
 | TLS 伪装 | rustls + rcgen（自签证书，CN 随机伪装厂商） |
 | WebSocket 伪装 | tokio-tungstenite |
 | SSH 外壳 | russh（完整 SSH 协议栈） |
+| REALITY 伪装 | 伪装成访问真实网站的 TLS1.3（主动探测被引导到真实站点） |
 | 前端 | React 18 · Ant Design 5 · Vite |
 | 静态资源 | rust-embed |
 | 代理 | SOCKS5（RFC 1928） |
