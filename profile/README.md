@@ -15,6 +15,8 @@
 | **[NekoC2](../NekoC2/)** | 自研协议模块化 C2 框架（agent 管理、任务下发、交互终端、文件管理、截图） | Java · C · Rust · Electron |
 | **[NekoGate](../NekoGate/)** | 自研协议内网穿透 + 五种流量伪装 | Rust · React · Ant Design |
 | **[NekoVWrap](../NekoVWrap/)** | vshell 专用流量包装器（单文件投递 · 静默后台 · 出站伪装） | Go |
+| **[NekoPriv](../NekoPriv/)** | Linux 本地安全测试终端工具（多内核提权模块，按 CVE 一键执行） | Go |
+| **[NekoLoot](../NekoLoot/)** | 三平台本地敏感信息搜集（浏览器/凭据/IM/文件，模块化采集） | Rust |
 
 ---
 
